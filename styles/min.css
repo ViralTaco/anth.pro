@@ -1,10 +1,11 @@
 /* Copyright © 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
 @import url('fonts/font-awesome.min.css');
-* {
+body, main, footer, span, a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   width: 100%;
@@ -14,6 +15,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
 .social {
   padding: 1rem;
   background: #383838;
@@ -23,32 +25,49 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.social .combo {
-  transform: scale(0.9);
-  transition: 0.2s cubic-bezier;
-  margin: 0 .5rem;
-  height: 3em;
-  width: 3em;
-  line-height: 3em;
-}
-.combo .circle {
-  color: #f9f9f9;
-  transition: 0.2s cubic-bezier;
-  font-size: 3em;
-}
-.combo .icon {
-  color: #444343;
-  font-size: 2rem;
-  transform: translateY(1px);
-  transition: 0.2s cubic-bezier;
+
+.icon::before {
+  transition: all .33s cubic-bezier(.785, .135, .15, .86)
 }
 
-.combo:hover { transform: scale(1.1) }
-.combo:hover, .combo:hover .icon { color: white }
-.tw:hover, .tw:hover .circle { color: #2196f3 }
-.gt:hover, .gt:hover .circle { color: #1f1f1f }
-.so:hover, .so:hover .circle { color: #f48024 }
-.gh:hover, .gh:hover .circle { color: #218bff }
+.social > .icon::before {
+  padding: 0;
+  margin: 0 .5rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+}
+
+.icon::before {
+  display: inline-block;
+  
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  color: #444343;
+  
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 100%;
+}
+
+.icon:hover::before {
+  transform: scale(1.1);
+  color: #fafafa;
+}
+
+.tw::before { content: '\f099'; }
+.tw:hover::before { background: #2196f3 }
+
+.gh::before { content: '\f09b'; }
+.gh:hover::before { background: #218bff }
+
+.so::before { content: '\f16c'; }
+.so:hover::before { background: #f48024 }
+
+.in::before { content: '\f0e1'; }
+.in:hover::before { background: #218bff }
 
 @font-face {
   font-family: 'Work Sans';
