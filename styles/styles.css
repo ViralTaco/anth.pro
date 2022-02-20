@@ -1,49 +1,13 @@
-/* Copyright © 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
-main, footer, span, a {
-  all: unset;
-  box-sizing: border-box;
+/* Copyright © 2021 Capobianco Anthony. <vt_@gmx.us> */
+@font-face {
+  font-family: 'i';
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  font-display: swap;
+  src: url('fonts/i.woff')  format('woff');
+  unicode-range: U+f3ed, U+f472, U+f667;
 }
-
-body {
-  background: #171717;
-  display: flex;
-  position: absolute;
-  inset: 0;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column wrap;
-}
-
-.social {
-  display: inline-flex;
-  flex-flow: row wrap;
-  padding: 1rem;
-  margin: 2rem auto;
-  justify-content: space-evenly;
-  align-self: center;
-  position: relative;
-  width: 100%;
-  max-width: 60ch;
-}
-
-.img-icon {
-  display: block;
-  block-size: 3rem;
-  color: #fafafa
-}
-
-.icon {
-  display: inline-flex;
-  flex-flow: column wrap;
-  width: min-intrinsic;
-  text-decoration: none;
-}
-
-.tw:hover .img-icon { color: #2196f3 }
-.gh:hover .img-icon { color: #218bff }
-.so:hover .img-icon { color: #f48024 }
-.in:hover .img-icon { color: #218bff }
-
 @font-face {
   font-family: 'Work Sans';
   font-style: normal;
@@ -52,11 +16,83 @@ body {
   src: url('fonts/work.woff') format('woff')
 }
 
-footer {
-  color: #fafafa;
-  font-family: 'Work Sans', sans-serif;
-  bottom: 1em;
-  position: absolute;
+:is(*, ::before, ::after) {
+  all: unset;
+  
+  display: flex;
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+:is(head) { display: none !important }
+:is(body) {
+  flex-direction: column;
+  align-content: center;
+  overflow: hidden scroll;
+  
+  font: normal normal calc(1rem + 1pt)/1rem 'Work Sans', ui-rounded, sans-serif;
+  font-variant: common-ligatures;
+  text-rendering: geometricPrecision;
+}
+
+:where(ul) { counter-reset: list-items 0 }
+:where(li) { counter-increment: list-items }
+/*counter debug*/
+li::after { content: counter(list-items) }
+
+.inlinebox { display: inline-block !important }
+
+.center {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list { list-style: none }
+.list > li {
+  display: inline-flex;
+  padding: 0 1rem
+}
+
+.icon, icon:visited {
+  text-decoration: none;
+  color: #222
+}
+
+li {
+  
+  background: rgba(255, 127, 127, 1);
+
+  
+}
+
+.icon::before {
+  font-family: i !important;
+  line-height: 1;
+  text-transform: none;
   text-align: center;
-  font-size: smaller;
+  vertical-align: -.125em;
+  
+  display: block;
+}
+
+.git::before { content: '\f3ed'; }
+.lin::before { content: '\f472'; }
+.sto::before { content: '\f667'; }
+  
+#copyright {
+  float: right;
+  display: inline;
+  text-align: center;
+  min-width: 100%;
+  position: absolute;
+  bottom: 1rem;
 }

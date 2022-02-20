@@ -33,7 +33,6 @@ body {
   display: block;
   width: calc(15ch - 4rem);
   height: calc(15ch - 4rem);
-  cursor: pointer
 }
 
 .tw:hover .img-icon { color: #2196f3 }
