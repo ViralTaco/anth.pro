@@ -1,73 +1,44 @@
 /* Copyright © 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
-@import url('fonts/font-awesome.min.css');
-body, main, footer, span, a {
-  margin: 0;
-  padding: 0;
+main, footer, span, a {
+  all: unset;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  width: 100%;
   background: #171717;
   display: flex;
+  position: absolute;
+  inset: 0;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-flow: column wrap;
+  color: #fafafa
 }
 
 .social {
-  padding: 1rem;
-  background: #383838;
-  border-radius: 1rem;
-  margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.icon::before {
-  transition: all .33s cubic-bezier(.785, .135, .15, .86)
-}
-
-.social > .icon::before {
-  padding: 0;
-  margin: 0 .5rem;
-  height: 3rem;
-  width: 3rem;
-  line-height: 3rem;
-}
-
-.icon::before {
-  display: inline-block;
-  
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 2rem;
-  text-align: center;
-  vertical-align: middle;
-  color: #444343;
+  position: relative;
+  display: inline-flex;
+  flex-flow: row wrap;
   
   padding: 1rem;
-  background: #fafafa;
-  border-radius: 100%;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 60ch;
+  
+  justify-content: space-evenly;
+  align-self: center;
 }
 
-.icon:hover::before {
-  transform: scale(1.1);
-  color: #fafafa;
+.img-icon {
+  display: block;
+  width: calc(15ch - 4rem);
+  height: calc(15ch - 4rem);
 }
 
-.tw::before { content: '\f099'; }
-.tw:hover::before { background: #2196f3 }
-
-.gh::before { content: '\f09b'; }
-.gh:hover::before { background: #218bff }
-
-.so::before { content: '\f16c'; }
-.so:hover::before { background: #f48024 }
-
-.in::before { content: '\f0e1'; }
-.in:hover::before { background: #218bff }
+.tw:hover .img-icon { color: #2196f3 }
+.gh:hover .img-icon { color: #218bff }
+.so:hover .img-icon { color: #f48024 }
+.in:hover .img-icon { color: #218bff }
 
 @font-face {
   font-family: 'Work Sans';
@@ -78,11 +49,9 @@ body {
 }
 
 footer {
-  display: inline;
-  color: #f9f9f9;
   font-family: 'Work Sans', sans-serif;
   bottom: 1em;
   position: absolute;
   text-align: center;
-  font-size: smaller;
+  font-size: smaller
 }
