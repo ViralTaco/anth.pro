@@ -1,7 +1,6 @@
 /* Copyright © 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
-body, main, footer, span, a {
-  margin: unset;
-  padding: unset;
+main, footer, span, a {
+  all: unset;
   box-sizing: border-box;
 }
 
@@ -12,33 +11,28 @@ body {
   inset: 0;
   align-items: center;
   justify-content: center;
-  flex-flow: column-reverse wrap;
+  flex-flow: column wrap;
+  color: #fafafa
 }
 
 .social {
+  position: relative;
   display: inline-flex;
   flex-flow: row wrap;
+  
   padding: 1rem;
-  margin: 2rem auto;
-  justify-content: space-evenly;
-  align-self: center;
-  position: relative;
+  margin: 1rem auto;
   width: 100%;
   max-width: 60ch;
+  
+  justify-content: space-evenly;
+  align-self: center;
 }
 
 .img-icon {
   display: block;
-  width: 3rem;
-  height: 3rem;
-  color: #fafafa
-}
-
-.icon {
-  display: inline-flex;
-  flex-flow: column wrap;
-  width: min-intrinsic;
-  text-decoration: none;
+  width: calc(15ch - 4rem);
+  height: calc(15ch - 4rem);
 }
 
 .tw:hover .img-icon { color: #2196f3 }
@@ -55,10 +49,9 @@ body {
 }
 
 footer {
-  color: #fafafa;
   font-family: 'Work Sans', sans-serif;
   bottom: 1em;
   position: absolute;
   text-align: center;
-  font-size: smaller;
+  font-size: smaller
 }
