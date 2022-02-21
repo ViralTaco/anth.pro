@@ -5,7 +5,6 @@ main, footer, span, a {
 }
 
 body {
-  background: #171717;
   display: flex;
   position: absolute;
   inset: 0;

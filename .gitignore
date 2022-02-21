@@ -1,6 +1,9 @@
 /*
 !/styles/min.css
 !/styles/fonts/work.woff
-!/index.html
 !/robots.txt
 !/CNAME
+!/*.png
+!/*.ico
+!/*.html
+!/*.webmanifest
