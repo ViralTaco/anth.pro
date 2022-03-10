@@ -1,0 +1,50 @@
+/* Copyright Â© 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
+:where(main, footer, a) {
+  all: unset;
+  box-sizing: border-box
+}
+
+:where(body) {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  color: #fff;
+}
+
+.social {
+  display: inline-flex;
+  position: relative;
+  flex-flow: row wrap;
+  
+  padding: 1rem;
+  margin: auto;
+  max-width: 60ch;
+  width: 100%;
+  
+  justify-content: space-evenly;
+  align-self: center;
+}
+.icon { pointer-events: auto }
+.img-icon {
+  display: block;
+  stroke-width: 1.3pt;
+  
+  --icon-size: calc(15ch - 4rem);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  cursor: pointer
+}
+.tw:where(:hover, :active) { color: #1da1f2 }
+.gh:where(:hover, :active) { color: #218bff }
+.so:where(:hover, :active) { color: #f48024 }
+.in:where(:hover, :active) { color: #0a66c2 }
+
+footer {
+  position: absolute;
+  bottom: .1em;
+  text-align: center;
+  font-family: ui-rounded, emoji, sans-serif
+}
