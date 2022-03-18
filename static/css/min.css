@@ -1,50 +1,63 @@
-/* Copyright Â© 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
-:where(main, footer, a) {
+/* Copyright (c) 2021-2022 Capobianco Anthony. <vt_@gmx.us> */
+:is(main, footer, a) {
   all: unset;
   box-sizing: border-box
 }
 
-:where(body) {
+:is(body) {
   display: flex;
   position: absolute;
   inset: 0;
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  color: #fff;
+  margin: unset;
+  color: white
 }
 
+:is(li) { list-style: none }
 .social {
   display: inline-flex;
   position: relative;
   flex-flow: row wrap;
   
   padding: 1rem;
-  margin: auto;
+  margin: 1rem auto;
   max-width: 60ch;
   width: 100%;
   
   justify-content: space-evenly;
-  align-self: center;
+  align-self: center
 }
-.icon { pointer-events: auto }
+
 .img-icon {
+  transition: all .3s cubic-bezier(.785, .135, .15, .86);
+  cursor: pointer;
   display: block;
-  stroke-width: 1.3pt;
-  
   --icon-size: calc(15ch - 4rem);
   width: var(--icon-size);
   height: var(--icon-size);
-  cursor: pointer
+  stroke-width: 1pt
 }
-.tw:where(:hover, :active) { color: #1da1f2 }
-.gh:where(:hover, :active) { color: #218bff }
-.so:where(:hover, :active) { color: #f48024 }
-.in:where(:hover, :active) { color: #0a66c2 }
 
-footer {
+.icon:target {
+  
+}
+
+.tw:where(:hover, :active, :focus) { color: #1da1f2 }
+.gh:where(:hover, :active, :focus) { color: #218bff }
+.so:where(:hover, :active, :focus) { color: #f48024 }
+.in:where(:hover, :active, :focus) { color: #0a66c2 }
+
+:is(footer) {
   position: absolute;
-  bottom: .1em;
+  bottom: 0;
   text-align: center;
-  font-family: ui-rounded, emoji, sans-serif
+  font-family: ui-rounded, ui-sans-serif, emoji, sans-serif
+}
+
+@media print {
+  a::after {
+    content: attr(title) + ': ' + attr(href);
+  }
 }
