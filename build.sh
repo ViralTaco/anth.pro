@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-builtin clear
+command clear
 command html5validator --root . --no-asciiquotes --format=text
 
 # Not unusual to modify more than one file
