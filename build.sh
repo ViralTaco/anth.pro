@@ -9,7 +9,6 @@ for file in $(git s -s | awk '{if ($1 == "M") print $2}'); do
 done
 
 command php sitemap.php > sitemap.xml &&\
-command git commit -a sitemap.xml -m 'date update'&&\
+command git add sitemap.xml&&\
+command git commit -m 'date update'&&\
 command git s
-
-return $?
