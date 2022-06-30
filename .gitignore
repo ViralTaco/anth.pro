@@ -8,3 +8,4 @@
 !/favicon.ico
 !/CNAME
 !/build.sh
+!/.well-known/cf-2fa-verify.txt
