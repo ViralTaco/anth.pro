@@ -12,4 +12,4 @@ command php sitemap.php > sitemap.xml &&\
 command git add sitemap.xml&&\
 command git commit -m 'date update'&&\
 command git s
-return 0
+
