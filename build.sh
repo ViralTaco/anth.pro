@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 command clear
 command html5validator --root . --no-asciiquotes --format=text
@@ -12,3 +12,4 @@ command php sitemap.php > sitemap.xml &&\
 command git add sitemap.xml&&\
 command git commit -m 'date update'&&\
 command git s
+return 0
