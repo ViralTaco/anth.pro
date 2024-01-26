@@ -1,6 +1,6 @@
 /* Copyright (c) 2021,2022,2023 Capobianco Anthony. <vt_@gmx.us> */
 :root { max-block-size: fit-content }
-:is(main, footer, a) {
+:is(main, a) {
   all: unset;
   box-sizing: border-box
 }
@@ -45,17 +45,7 @@
 .so:where(:hover, :active, :focus) { color: #f48024 }
 .in:where(:hover, :active, :focus) { color: #0a66c2 }
 
-:is(footer) {
-  display: inline-block;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  margin: auto;
-  font-family: ui-rounded, ui-sans-serif, emoji, sans-serif
-}
-
 @media print {
-  :is(footer) { display: none }
   :is(body) { color: #000 }
 
   .social {
