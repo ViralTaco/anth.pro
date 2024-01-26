@@ -3,9 +3,9 @@
 !/static/css/min.css
 !/index.html
 !/sitemap.xml
+!/sitemap.php
 !/robots.txt
 !/site.webmanifest
 !/favicon.ico
 !/CNAME
 !/build.sh
-!/.well-known/cf-2fa-verify.txt
