@@ -1,5 +1,9 @@
 /* Copyright (c) 2021,2022,2023 Capobianco Anthony. <vt_@gmx.us> */
-:root { max-block-size: fit-content }
+:root { 
+  overflow: hidden;
+  max-block-size: fit-content
+}
+
 :is(main, a) {
   all: unset;
   box-sizing: border-box
@@ -10,11 +14,13 @@
   display: flex;
   position: absolute;
   inset: 0;
-  align-items: center;
-  justify-content: center;
   flex-flow: column wrap;
   margin: 0;
   color: white;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 :is(li) { list-style: none }
@@ -40,7 +46,6 @@
   stroke-width: 1pt
 }
 
-.tw:where(:hover, :active, :focus) { color: #1da1f2 }
 .gh:where(:hover, :active, :focus) { color: #218bff }
 .so:where(:hover, :active, :focus) { color: #f48024 }
 .in:where(:hover, :active, :focus) { color: #0a66c2 }
