@@ -1,4 +1,4 @@
-/* Copyright (c) 2021,2022,2023 Capobianco Anthony. <vt_@gmx.us> */
+/* Copyright (c) 2021,2022,2023,2024 Capobianco Anthony. <vt_@gmx.us> */
 :root { max-block-size: fit-content }
 :is(main, a) {
   all: unset;
@@ -40,7 +40,6 @@
   stroke-width: 1pt
 }
 
-.tw:where(:hover, :active, :focus) { color: #1da1f2 }
 .gh:where(:hover, :active, :focus) { color: #218bff }
 .so:where(:hover, :active, :focus) { color: #f48024 }
 .in:where(:hover, :active, :focus) { color: #0a66c2 }
