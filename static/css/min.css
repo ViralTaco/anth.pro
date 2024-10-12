@@ -67,20 +67,28 @@
 }
 
 @media print {
-  :is(body) { color: #000 }
-
+ :is(body) {
+    color: #000;
+    display: table;
+    margin: auto;
+    background: unset
+  }
+  
   .social {
     flex-flow: column wrap;
-    line-height: 6rem
+    max-width: unset;
+    max-width: 100vw;
+    display: inline-flex;
+    line-height: 10vh;
+    justify-content: unset;
+    min-width: 100ch
   }
   
   .icon::after {
-    display: inline-flex;
     content: attr(title) ':\a' attr(href);
-    white-space: pre-wrap;
-    vertical-align: baseline;
-    text-align: left;
-    line-height: 1.1rem
+    display: inline;
+    width: max-content;
+    position: absolute
   }
   
   .img-icon {
